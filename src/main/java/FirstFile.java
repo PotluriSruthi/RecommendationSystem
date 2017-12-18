@@ -8,7 +8,7 @@ public class FirstFile {
         Long start = System.currentTimeMillis();
       // File rfileName = new File("/Users/sruthipotluri/Desktop/sampleRatings.txt");
 
-        File rfileName = new File("/Users/sruthipotluri/Desktop/rat_1M.txt");
+       File rfileName = new File("/Users/sruthipotluri/Desktop/rat_1M.txt");
       /*  File wfileName = new File("/Users/sruthipotluri/Desktop/rat_write_1M.txt");
         File wfileName = new File("/Users/sruthipotluri/Desktop/sampleWrite.txt"); */
 

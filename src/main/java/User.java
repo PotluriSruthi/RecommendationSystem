@@ -1,30 +1,42 @@
+import org.springframework.data.annotation.Transient;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.HashSet;
+import java.util.TreeMap;
 
 /**
  * Created by sruthipotluri on 11/22/17.
  */
+@Document
 public class User {
-    private String userID;
-    private  HashSet<String> movieList = new HashSet<String>();
 
-    public User(String userID) {
-        this.userID = userID;
+
+    private String userId;
+
+    private  TreeMap<String,Double> movieRating = new TreeMap<>();
+
+    public User(String userId) {
+
+        this.userId = userId;
     }
 
-    public String getUserID() {
-        return userID;
+    public String getUserId() {
+
+        return userId;
     }
 
-    public HashSet<String> getMovieList() {
-        return movieList;
-    }
 
-    public void setMovieList(HashSet<String> movieList) {
-        this.movieList = movieList;
-    }
 
     @Override
     public String toString() {
-        return " "+ movieList;
+        return " "+ movieRating;
+    }
+
+    public TreeMap<String, Double> getMovieRating() {
+        return movieRating;
+    }
+
+    public void setMovieRating(TreeMap<String, Double> movieList) {
+        this.movieRating = movieList;
     }
 }

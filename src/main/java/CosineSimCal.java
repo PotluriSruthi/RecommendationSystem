@@ -8,6 +8,8 @@ import java.util.TreeMap;
 /**
  * Created by sruthipotluri on 11/18/17.
  */
+
+//Deprecated
 public class CosineSimCal {
     TreeMap<String, Movie> utilityMatrix = new TreeMap<String, Movie>();
   //  double[][] cosineSim = new double[7][7];
@@ -139,8 +141,8 @@ public class CosineSimCal {
                     }
 
                 }
-                Driver d = new Driver ();
-                d.save(movie1);
+               // Driver d = new Driver ();
+               // d.save(movie1);
                // System.out.println(movie1);
             }
         }
