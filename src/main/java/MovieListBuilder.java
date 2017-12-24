@@ -62,7 +62,7 @@ public class MovieListBuilder {
 
                 //This check if the movie is a new movie, if its new, we add the user and his ratings to our collection
 
-             /*   if (!utilityMatrix.containsKey(movieID)) {
+               if (!utilityMatrix.containsKey(movieID)) {
 
                     //Creating the movie object with its new user and rating
                     movie = new Movie(movieID);
@@ -76,9 +76,9 @@ public class MovieListBuilder {
                     movie = utilityMatrix.get(movieID);
                     addingMovieToUtilityMatrix(movie);
 
-                } */
+                }
 
-                if(!userMovieList.containsKey(userId)){
+           /*     if(!userMovieList.containsKey(userId)){
                     user = new User(userId);
                     addingUsertoUserMovieList(user);
                     userMovieList.put(userId,user);
@@ -87,7 +87,7 @@ public class MovieListBuilder {
                 else{
                     user = userMovieList.get(userId);
                     addingUsertoUserMovieList(user);
-                }
+                } */
             }
 
           // System.out.println(utilityMatrix);
@@ -102,14 +102,16 @@ public class MovieListBuilder {
                 bw.write(u.getKey() + " "+u.getValue());
                 bw.flush();
             } */
-           // normaliser(utilityMatrix);
-           // CosSimCal c = new CosSimCal(utilityMatrix);
-           // c.calculate();
+            normaliser(utilityMatrix);
+            CosSimCal c = new CosSimCal(utilityMatrix);
+            c.calculate();
 
-            for(int i = 1; i < userMovieList.size(); i++) {
+            //Should remove Comment
+
+       /*     for(int i = 1; i < userMovieList.size(); i++) {
                 if(userMovieList.containsKey(String.valueOf(i)))
                     d.savingUser(userMovieList.get(String.valueOf(i)));
-            }
+            } */
 
         } catch (IOException ie) {
             System.out.println("File not present");

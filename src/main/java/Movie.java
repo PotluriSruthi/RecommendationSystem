@@ -9,8 +9,8 @@ import java.util.TreeMap;
 @Document
 public class Movie{
 
-    @Transient
-    private String id;
+
+    private String movieId;
 
     @Transient
     private String name;
@@ -29,7 +29,7 @@ public class Movie{
 
 
     public Movie(String id) {
-        this.id = id;
+        this.movieId = id;
        /* for(int i = 1; i <=12; i++){
         for(int i=1; i<=6040; i++){n
             userlist.put(i,0.0f);
@@ -37,7 +37,7 @@ public class Movie{
     }
 
     public String getId() {
-        return id;
+        return movieId;
     }
 
    /* public void setId(int id) {
